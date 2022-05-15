@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Banking operations</title>
+</head>
+<body>
+<div>
+    <table class="table" method="get" th:action="@{/banking-operations}" th:object="${account}" style="width:18%">
+        <thead>
+        <tr>
+            <th scope="col">IBAN</th>
+            <th scope="col">Balance</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="account : ${account}">
+            <td th:text="${account.IBAN}"></td>
+            <td th:text="${account.balance}">
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    <div>
+        <a th:href="@{/view-accounts}" type="button">Back to previous page</a>
+    </div>
+</div>
+</form>
+</body>
+</html>
