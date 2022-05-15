@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Id selection</title>
+</head>
+<body>
+<form action="/user" method="post" th:object="${user}">
+    <label>Client ID</label>
+    <input id="id" placeholder="Please enter your client ID" th:field="*{clientId}">
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
